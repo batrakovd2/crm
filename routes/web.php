@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('client', [App\Http\Controllers\ClientController::class, 'index'])->name('client');
-Route::get('product', [App\Http\Controllers\ProductController::class, 'index'])->name('product');
-Route::get('order', [App\Http\Controllers\OrderController::class, 'index'])->name('order');
-Route::get('cost', [App\Http\Controllers\CostController::class, 'index'])->name('cost');
+Route::resource('client', ClientController::class);
+Route::resource('product', ProductController::class);
+Route::resource('order', OrderController::class);
+Route::resource('cost', CostController::class);

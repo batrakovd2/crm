@@ -13,6 +13,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/OverlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('css/adminlte.css')}}">
 </head>
@@ -183,7 +184,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item menu-close">
-                        <a href="{{route("order")}}" class="nav-link">
+                        <a href="{{route("order.index")}}" class="nav-link">
                             <i class="nav-icon fas fa-list"></i>
                             <p>
                                 Заказы
@@ -192,13 +193,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route("order.create")}}" class="nav-link">
                                     <i class="nav-icon fas fa-plus"></i>
                                     <p>Добавить</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route("order")}}" class="nav-link">
+                                <a href="{{route("order.index")}}" class="nav-link">
                                     <i class="fas fa-bars nav-icon"></i>
                                     <p>Список</p>
                                 </a>
@@ -206,7 +207,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </ul>
                     </li>
                     <li class="nav-item menu-close">
-                        <a href="{{route("client")}}" class="nav-link">
+                        <a href="{{route("client.index")}}" class="nav-link">
                             <i class="nav-icon fas fa-user-tie"></i>
                             <p>
                                 Клиенты
@@ -216,7 +217,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route("client")}}" class="nav-link">
+                                <a href="{{route("client.index")}}" class="nav-link">
                                     <i class="nav-icon fas fa-plus"></i>
                                     <p>Добавить</p>
                                 </a>
@@ -230,7 +231,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </ul>
                     </li>
                     <li class="nav-item menu-close">
-                        <a href="{{route("product")}}" class="nav-link">
+                        <a href="{{route("product.index")}}" class="nav-link">
                             <i class="nav-icon fab fa-raspberry-pi"></i>
                             <p>
                                 Продукты
@@ -245,7 +246,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route("product")}}" class="nav-link">
+                                <a href="{{route("product.index")}}" class="nav-link">
                                     <i class="fas fa-bars nav-icon"></i>
                                     <p>Список</p>
                                 </a>
@@ -253,7 +254,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </ul>
                     </li>
                     <li class="nav-item menu-close">
-                        <a href="{{route("cost")}}" class="nav-link">
+                        <a href="{{route("cost.index")}}" class="nav-link">
                             <i class="nav-icon fas fa-dollar-sign"></i>
                             <p>
                                 Расходы
@@ -268,7 +269,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route("cost")}}" class="nav-link">
+                                <a href="{{route("cost.index")}}" class="nav-link">
                                     <i class="fas fa-bars nav-icon"></i>
                                     <p>Список</p>
                                 </a>
@@ -301,10 +302,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="/js/adminlte.min.js"></script>
+<script src="{{asset('js/adminlte.min.js')}}"></script>
+<script src="{{asset('js/demo.js')}}"></script>
 </body>
 </html>
