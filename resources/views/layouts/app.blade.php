@@ -177,54 +177,103 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
             </div>
 
-            <!-- SidebarSearch Form -->
-            <div class="form-inline">
-                <div class="input-group" data-widget="sidebar-search">
-                    <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-                    <div class="input-group-append">
-                        <button class="btn btn-sidebar">
-                            <i class="fas fa-search fa-fw"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
             <!-- Sidebar Menu -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <li class="nav-item menu-close">
+                        <a href="{{route("order")}}" class="nav-link">
+                            <i class="nav-icon fas fa-list"></i>
                             <p>
-                                Starter Pages
+                                Заказы
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Active Page</p>
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-plus"></i>
+                                    <p>Добавить</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Inactive Page</p>
+                                <a href="{{route("order")}}" class="nav-link">
+                                    <i class="fas fa-bars nav-icon"></i>
+                                    <p>Список</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
+                    <li class="nav-item menu-close">
+                        <a href="{{route("client")}}" class="nav-link">
+                            <i class="nav-icon fas fa-user-tie"></i>
                             <p>
-                                Simple Link
-                                <span class="right badge badge-danger">New</span>
+                                Клиенты
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route("client")}}" class="nav-link">
+                                    <i class="nav-icon fas fa-plus"></i>
+                                    <p>Добавить</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-bars nav-icon"></i>
+                                    <p>Список</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item menu-close">
+                        <a href="{{route("product")}}" class="nav-link">
+                            <i class="nav-icon fab fa-raspberry-pi"></i>
+                            <p>
+                                Продукты
+                                <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-plus"></i>
+                                    <p>Добавить</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route("product")}}" class="nav-link">
+                                    <i class="fas fa-bars nav-icon"></i>
+                                    <p>Список</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item menu-close">
+                        <a href="{{route("cost")}}" class="nav-link">
+                            <i class="nav-icon fas fa-dollar-sign"></i>
+                            <p>
+                                Расходы
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-plus"></i>
+                                    <p>Добавить</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route("cost")}}" class="nav-link">
+                                    <i class="fas fa-bars nav-icon"></i>
+                                    <p>Список</p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
